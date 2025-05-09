@@ -79,13 +79,10 @@ export function CheckoutModal({
           </div>
         </div>
 
-        <DialogFooter className="flex gap-2 mt-4">
-          <Button variant="outline" onClick={onClose} disabled={isLoading}>
-            Close
-          </Button>
-          <Button onClick={onConfirm} disabled={isLoading}>
-            {isLoading ? "Processing..." : "Confirm Order"}
-          </Button>
+        <DialogFooter className="flex justify-center mt-4">
+          <p className="text-center text-lg text-hko-text-primary">
+            Please proceed to mobile to complete your order
+          </p>
         </DialogFooter>
       </DialogContent>
     </Dialog>
