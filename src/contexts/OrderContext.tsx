@@ -128,13 +128,8 @@ export function OrderProvider({ children }: { children: ReactNode }) {
             reconnectAttempt++;
             connectWebSocket();
           }, timeout);
-        } else {
-          toast({
-            title: "Connection Error",
-            description: "Real-time updates are currently unavailable. Please refresh the page to try again.",
-            variant: "destructive"
-          });
         }
+        // Silently handle connection failure without showing error modal
       };
     };
 
